@@ -60,7 +60,7 @@ export default function auth({
 }
 
 export async function getServerSideProps(ctx: NextPageContext) {
-  const { req, query } = ctx;
+  const { query } = ctx;
   const tab = query.tab ? query.tab : "signin";
   const callbackUrl = query.callbackUrl
     ? query.callbackUrl
