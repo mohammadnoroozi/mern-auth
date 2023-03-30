@@ -48,6 +48,7 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_ID as string,
       clientSecret: process.env.GOOGLE_SECRET as string,
+      allowDangerousEmailAccountLinking: true
     }),
     // FacebookProvider({
     //   clientId: process.env.FACEBOOK_ID as string,
@@ -56,10 +57,12 @@ export default NextAuth({
     GitHubProvider({
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
+      allowDangerousEmailAccountLinking: true
     }),
     DiscordProvider({
       clientId: process.env.DISCORD_CLIENT_ID as string,
       clientSecret: process.env.DISCORD_CLIENT_SECRET as string,
+      allowDangerousEmailAccountLinking: true
     }),
     // TwitterProvider({
     //   clientId: process.env.TWITTER_CLIENT_ID as string,
@@ -69,6 +72,7 @@ export default NextAuth({
       clientId: process.env.AUTH0_CLIENT_ID as string,
       clientSecret: process.env.AUTH0_CLIENT_SECRET as string,
       issuer: process.env.AUTH0_ISSUER as string,
+      allowDangerousEmailAccountLinking: true
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
